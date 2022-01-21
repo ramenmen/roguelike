@@ -1,6 +1,6 @@
 # 2D Roguelike Tutorial - Reflections
 
-Through completing the tutorial, I learned a lot about Unity's functions. Even though the structure of the project is simple, it does make use of important functions in Unity such as coroutines, and uses inheritances. For me, it cemented the fact that it's crucial to make use of the full arsenal of available tools so as not to repeat code. I also learnt about several functions of Unity that I hadn't known about before. For instance, I never knew you could lock the inspector. 
+Through completing the tutorial, I learned a lot about Unity's functions. Even though the structure of the project is simple, it does make use of important functions in Unity such as coroutines and inheritances. For me, it cemented the fact that it's crucial to make use of the full arsenal of available tools so as not to repeat code. I also learnt about several functions of Unity that I hadn't known about before. For instance, I never knew you could lock the inspector. 
 
 <img width="423" alt="Screenshot 2022-01-21 at 1 16 41 AM" src="https://user-images.githubusercontent.com/66139098/150500313-aeb24412-152c-4609-a046-15653a139620.png">
 
