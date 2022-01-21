@@ -1,0 +1,4 @@
+#Thu Jan 20 16:37:22 PST 2022
+base.0=/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/launcher/build/intermediates/dex/release/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
