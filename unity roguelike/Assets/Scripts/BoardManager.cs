@@ -88,7 +88,6 @@ public class BoardManager : MonoBehaviour
 
     public void SetupScene (int level)
     {
-        Debug.Log("Setting up Scene");
         BoardSetup();
         InitialiseList();
         LayoutObjectAtRandom(wallTiles, wallCount.minimum, wallCount.maximum);

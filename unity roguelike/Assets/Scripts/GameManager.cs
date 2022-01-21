@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     private List<Enemy> enemies;
     private bool enemiesMoving;
     private bool doingSetup;
+    private bool gameOver = false;
 
     void Awake()
     {
@@ -35,7 +36,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         enemies = new List<Enemy>();
         boardScript = GetComponent<BoardManager>();
-       // InitGame();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -44,9 +44,13 @@ public class GameManager : MonoBehaviour
         InitGame();
     }
 
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void InitGame()
     {
-        Debug.Log("init game");
         doingSetup = true;
         levelText.text = "Day " + level;
         levelImage.SetActive(true);
@@ -63,13 +67,21 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        levelText.text = "After " + level + " days, you starved :(";
+        levelText.text = "After " + level + " days, you starved :(" + "\n\n Press to restart";
+        level = 0;
+        gameOver = true;
         levelImage.SetActive(true);
-        enabled = false;
     }
 
     void Update()
     {
+        if (gameOver) {
+            if (Input.touchCount > 0 || Input.anyKeyDown) {
+                ReloadLevel();
+                gameOver = false;
+            }
+            return;
+        }
         if (playersTurn || enemiesMoving || doingSetup)
             return;
         StartCoroutine(MoveEnemies());

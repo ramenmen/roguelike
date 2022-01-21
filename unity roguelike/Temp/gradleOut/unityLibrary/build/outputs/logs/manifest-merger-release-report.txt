@@ -30,13 +30,13 @@ ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityL
 activity#com.unity3d.player.UnityPlayerActivity
 ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:5-13:16
 	android:screenOrientation
-		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:111-149
+		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:111-155
 	android:launchMode
-		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:150-181
+		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:156-187
 	android:hardwareAccelerated
-		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:364-399
+		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:370-405
 	android:configChanges
-		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:182-363
+		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:188-369
 	android:theme
 		ADDED from /Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:69-110
 	android:name

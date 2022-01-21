@@ -1,14 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
     - BoardManager
     - Enemy
     - GameManager
-    - Loader
     - Player
-    - Readme
     - SoundManager
     - UIManager
     - Wall
@@ -16,6 +12,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -116,8 +113,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3014}
     - Class: 114
       Script: {instanceID: 4254}
-    - Class: 114
-      Script: {instanceID: 4342}
     - Class: 114
       Script: {instanceID: 4584}
     - Class: 115

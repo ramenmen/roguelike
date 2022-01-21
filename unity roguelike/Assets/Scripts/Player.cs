@@ -52,8 +52,6 @@ public class Player : MovingObject
         if (horizontal != 0)
             vertical = 0;
 
-        
-
     #else
         if (Input.touchCount > 0) 
         {
@@ -72,7 +70,7 @@ public class Player : MovingObject
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                     horizontal = x > 0 ? 1 : -1;
                 else
-                    horizontal = y > 0 ? 1 : -1;
+                    vertical = y > 0 ? 1 : -1;
             }   
         }
 
@@ -139,7 +137,7 @@ public class Player : MovingObject
 
     private void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.instance.ReloadLevel();
     }
 
     public void LoseFood (int loss)
@@ -155,6 +153,7 @@ public class Player : MovingObject
     {
         if (food <= 0)
         {
+            food = 100;
             GameManager.instance.GameOver();
             SoundManager.instance.RandomizeSfx(gameOverSound);
             SoundManager.instance.musicSource.Stop();

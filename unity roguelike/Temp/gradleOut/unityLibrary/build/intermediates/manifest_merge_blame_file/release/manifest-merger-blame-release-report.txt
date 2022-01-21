@@ -42,13 +42,13 @@
 26            android:name="com.unity3d.player.UnityPlayerActivity"
 26-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:15-68
 27            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-27-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:182-363
+27-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:188-369
 28            android:hardwareAccelerated="false"
-28-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:364-399
+28-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:370-405
 29            android:launchMode="singleTask"
-29-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:150-181
-30            android:screenOrientation="fullSensor"
-30-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:111-149
+29-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:156-187
+30            android:screenOrientation="reverseLandscape"
+30-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:111-155
 31            android:theme="@style/UnityThemeSelector" >
 31-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:5:69-110
 32            <intent-filter>
@@ -101,7 +101,7 @@
 56-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:5-101
 57            android:name="unity.build-id"
 57-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:16-45
-58            android:value="5512e29a-50cc-42e0-9c42-e5690e61ccdc" />
+58            android:value="5d8cc1af-4770-477f-9635-27f0605581ac" />
 58-->/Users/chuyue/Desktop/roguelike/unity roguelike/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:46-98
 59    </application>
 60
