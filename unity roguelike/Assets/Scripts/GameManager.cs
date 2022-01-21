@@ -17,7 +17,12 @@ public class GameManager : MonoBehaviour
     private Text levelText;
     [SerializeField]
     private GameObject levelImage;
-    private int level = 0;
+    [SerializeField]
+    private Text killsText;
+    private int kills = 0;
+    public int level = 0;
+
+    [SerializeField]
     private List<Enemy> enemies;
     private bool enemiesMoving;
     private bool doingSetup;
@@ -51,6 +56,7 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
+        killsText.text = "Kills: " + kills;
         doingSetup = true;
         levelText.text = "Day " + level;
         levelImage.SetActive(true);
@@ -69,6 +75,7 @@ public class GameManager : MonoBehaviour
     {
         levelText.text = "After " + level + " days, you starved :(" + "\n\n Press to restart";
         level = 0;
+        kills = 0;
         gameOver = true;
         levelImage.SetActive(true);
     }
@@ -92,6 +99,15 @@ public class GameManager : MonoBehaviour
         enemies.Add(script);
     }
 
+    public void RemoveEnemyFromList(Enemy script)
+    {
+        enemies.Remove(script);
+        kills++;
+        killsText.text = "Kills: " + kills;
+    }
+
+    public float moveTime = 0.1f;
+
     IEnumerator MoveEnemies()
     {
         enemiesMoving = true;
@@ -103,7 +119,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < enemies.Count; i++)
         {
             enemies[i].MoveEnemy();
-            yield return new WaitForSeconds(enemies[i].moveTime);
+            yield return new WaitForSeconds(moveTime);
         }
 
         playersTurn = true;

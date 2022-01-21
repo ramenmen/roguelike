@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Player : MovingObject
 {
     public int wallDamage = 1;
+    public int enemyDamage = 20;
     public int pointsPerFood = 10;
     public int pointsPerSoda = 20;
     public float restartLevelDelay = 1f;
@@ -130,9 +131,20 @@ public class Player : MovingObject
 
     protected override void OnCantMove<T> (T component)
     {
+        Debug.Log("cantmove");
         Wall hitWall = component as Wall;
-        hitWall.DamageWall(wallDamage);
-        animator.SetTrigger("PlayerChop");
+        if (hitWall != null) {
+            hitWall.DamageWall(wallDamage);
+            animator.SetTrigger("PlayerChop");
+        }/*
+        else
+        {
+            Debug.Log("enemy");
+            Enemy hitEnemy = component as Enemy;
+            hitEnemy.LoseHp(enemyDamage);
+            SoundManager.instance.RandomizeSfx(chopSound1, chopSound2);
+        }*/
+        
     }
 
     private void Restart()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MovingObject
 {
@@ -12,11 +13,18 @@ public class Enemy : MovingObject
     public AudioClip enemyAttackSound1;
     public AudioClip enemyAttackSound2;
 
+    [SerializeField]
+    private Text hpText;
+    public int hp;
+
     protected override void Start()
     {
         GameManager.instance.AddEnemyToList(this);
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        hp = Random.Range((int)Mathf.Log(GameManager.instance.level,2f)*50, (int)Mathf.Log(GameManager.instance.level,2f)*100);
+        UpdateHpText();
         base.Start();
     }
 
@@ -31,6 +39,11 @@ public class Enemy : MovingObject
         base.AttemptMove <T> (xDir, yDir);
 
         skipMove = true;
+    }
+
+    void UpdateHpText()
+    {
+        hpText.text = hp.ToString();
     }
 
     public void MoveEnemy()
@@ -51,6 +64,18 @@ public class Enemy : MovingObject
 
         animator.SetTrigger("EnemyAttack");
         SoundManager.instance.RandomizeSfx(enemyAttackSound1,enemyAttackSound2);
+        LoseHp(hitPlayer.enemyDamage);
         hitPlayer.LoseFood(playerDamage);
+    }
+
+    public void LoseHp (int loss)
+    {
+        hp -= loss;
+        UpdateHpText();
+        if (hp <= 0)
+        {
+            GameManager.instance.RemoveEnemyFromList(this);
+            Destroy(gameObject);
+        }
     }
 }
